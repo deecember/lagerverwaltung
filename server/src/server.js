@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     res.json({message: "Lagerverwaltung RESTful API"});
 });
 
-//require("./routes/stock.routes.js")(app);
+require("./routes/stock.routes.js")(app);
 
 app.listen(3001, () => {
     console.log("Server is running on port 3001")

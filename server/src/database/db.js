@@ -6,7 +6,7 @@ const db = new sqlite3.Database("./src/database/stock_management.sqlite", (err) 
     console.error("Error opening database: " + err.message);
     return;
   }
-  db.run('DROP TABLE stocks');
+  // db.run('DROP TABLE stocks');
 
   db.run('CREATE TABLE IF NOT EXISTS stocks( \
     article_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\

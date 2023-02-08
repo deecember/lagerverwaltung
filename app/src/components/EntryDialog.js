@@ -1,7 +1,7 @@
 import { Button, Modal } from "react-bootstrap";
 import Axios from 'axios';
 
-function EntrieDialog({show, onHide, edit, setEdit, inputName, setInputName,
+function EntryDialog({show, onHide, edit, setEdit, inputName, setInputName,
     inputStockLevel, setInputStockLevel, inputStorage, setInputStorage, inputStoragePlace, setInputStoragePlace}){
     const save = () => {
       if(inputName.trim() !== ""){
@@ -69,4 +69,4 @@ function EntrieDialog({show, onHide, edit, setEdit, inputName, setInputName,
     )
 }
 
-export default EntrieDialog;
+export default EntryDialog;

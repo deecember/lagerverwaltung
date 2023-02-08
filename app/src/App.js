@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import EntrieDialog from './components/EntrieDialog';
+import EntryDialog from './components/EntryDialog';
 import SelectableTable from './components/SelectableTable';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 
@@ -22,7 +22,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Container>
           <h1>Lagerverwaltung</h1>
-          <EntrieDialog
+          <EntryDialog
           show={modalShow}
           onHide={() => setModalShow(false)}
           edit={edit}
