@@ -1,12 +1,12 @@
 const sqlite3 = require("sqlite3");
 
 // Create a connection to the database
-const db = new sqlite3.Database("./src/database/stock_management.sqlite", (err) =>{
+const db = new sqlite3.Database("./src/database/stock_management.sqlite", (err: any) =>{
   if(err){
     console.error("Error opening database: " + err.message);
     return;
   }
-  // db.run('DROP TABLE stocks');
+  db.run('DROP TABLE stocks');
 
   db.run('CREATE TABLE IF NOT EXISTS stocks( \
     article_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,\
@@ -14,7 +14,7 @@ const db = new sqlite3.Database("./src/database/stock_management.sqlite", (err) 
     stock_level INTEGER,\
     storage NVARCHAR(20),\
     storage_place NVARCHAR(20)\
-)', (err) => {
+)', (err: any) => {
     if (err) {
         console.log("Error creating table: " + err.message);
     }

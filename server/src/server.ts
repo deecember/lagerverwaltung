@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res) => {
+app.get("/", (req: any, res: any) => {
     res.json({message: "Lagerverwaltung RESTful API"});
 });
 
